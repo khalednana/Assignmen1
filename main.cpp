@@ -129,11 +129,79 @@ public:
 };
 int main(int argc, const char * argv[]) {
     
+     car c1,c2,c3,c4;
+    c1.setCarType("car");
+    c2.setCarType("moytorcycle");
+    c3.setCarType("truck");
+    c4.setCarType("private");
+    c1.setCarBrand("BMW");
+    c2.setCarBrand("KIA");
+    c3.setCarBrand("toyota");
+    c4.setCarBrand("MG");
+    c1.setCarPlate("ABC1");
+    c2.setCarPlate("ABC2");
+    c3.setCarPlate("ABC3");
+    c4.setCarPlate("ABC4");
+    c1.setSpeed(130);
+    c2.setSpeed(110);
+    c3.setSpeed(90);
+    c4.setSpeed(70);
+    c1.setYearModel(2018);
+    c2.setYearModel(2018);
+    c3.setYearModel(2015);
+    c4.setYearModel(2020);
+    road r1;
+    road r2;
+    road r3;
+    r1.setSpeedLimit(80);
+    r3.setSpeedLimit(100);
+    r3.setSpeedLimit(120);
+    r1.setRoadType('A');
+    r2.setRoadType('B');
+    r3.setRoadType('C');
     queue<car> cars{};
-    
     cars.push(c1);
-    cars.push(car2.car("BMW", "motorcycle", 2015));
+    cars.push(c2);
+    cars.push(c3);
+    cars.push(c4);
+    r1.Radar(c1.getSpeed(), r1.getRoadType());
+    r1.Radar(c2.getSpeed(), r1.getRoadType());
+    r1.Radar(c3.getSpeed(), r1.getRoadType());
+    r1.Radar(c4.getSpeed(), r1.getRoadType());
+    r1.allow(c1.getCarType());
+    r1.allow(c2.getCarType());
+    r1.allow(c3.getCarType());
+    r1.allow(c4.getCarType());
+    r1.age(c1.getYearModel());
+    r1.age(c2.getYearModel());
+    r1.age(c3.getYearModel());
+    r1.age(c4.getYearModel());
     
+    r2.Radar(c1.getSpeed(), r2.getRoadType());
+    r2.Radar(c2.getSpeed(), r2.getRoadType());
+    r2.Radar(c3.getSpeed(), r2.getRoadType());
+    r2.Radar(c4.getSpeed(), r2.getRoadType());
+    r2.allow(c1.getCarType());
+    r2.allow(c2.getCarType());
+    r2.allow(c3.getCarType());
+    r2.allow(c4.getCarType());
+    r2.age(c1.getYearModel());
+    r2.age(c2.getYearModel());
+    r2.age(c3.getYearModel());
+    r2.age(c4.getYearModel());
+    
+    r3.Radar(c1.getSpeed(), r3.getRoadType());
+    r3.Radar(c2.getSpeed(), r3.getRoadType());
+    r3.Radar(c3.getSpeed(), r3.getRoadType());
+    r3.Radar(c4.getSpeed(), r3.getRoadType());
+    r3.allow(c1.getCarType());
+    r3.allow(c2.getCarType());
+    r3.allow(c3.getCarType());
+    r3.allow(c4.getCarType());
+    r3.age(c1.getYearModel());
+    r3.age(c2.getYearModel());
+    r3.age(c3.getYearModel());
+    r3.age(c4.getYearModel());
     
     return 0;
 }
